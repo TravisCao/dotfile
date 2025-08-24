@@ -1,0 +1,14 @@
+{
+  "switch_to_custom": {
+    "triggered": false,
+    "timestamp": null
+  },
+  "exceed_max_limit": {
+    "triggered": true,
+    "timestamp": "2025-08-23T22:13:40.429034"
+  },
+  "tokens_will_run_out": {
+    "triggered": false,
+    "timestamp": null
+  }
+}

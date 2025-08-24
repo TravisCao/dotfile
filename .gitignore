@@ -1,0 +1,22 @@
+# Sensitive files
+.credentials.json
+**/secrets/
+**/.env
+
+# Claude session data (don't sync)
+claude/projects/
+claude/todos/
+claude/shell-snapshots/
+claude/ide/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup directories
+.dotfiles_backup_*
