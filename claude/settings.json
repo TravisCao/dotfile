@@ -1,4 +1,10 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__serena__*",
+      "mcp__context7__*"
+    ]
+  },
   "model": "opusplan",
   "statusLine": {
     "type": "command",

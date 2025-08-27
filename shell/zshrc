@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export GUROBI_HOME=/opt/gurobi1201/linux64
 export PATH="$GUROBI_HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export LD_LIBRARY_PATH="$GUROBI_HOME/lib:$LD_LIBRARY_PATH"
 export NODE_OPTIONS="--max-old-space-size=8192" # this is for pylance crashing https://github.com/microsoft/pylance-release/blob/main/TROUBLESHOOTING.md#increase-memory-limit-for-vs-code-remote-only
 
@@ -78,6 +79,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -95,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
@@ -104,13 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshrc="vim ~/.zshrc"
+alias sz="source ~/.zshrc"
+alias claude="claude --dangerously-skip-permissions"
 
 . "$HOME/.local/bin/env"
 
 # Add Nexus CLI to PATH
 export PATH="/home/yjcao/.nexus/bin:$PATH"
 
-# Auto-Warpify
-[[ "$-" == *i* ]] && printf 'P$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh", "uname": "Linux" }}�' 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/R2024b/bin/glnxa64

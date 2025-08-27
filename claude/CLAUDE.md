@@ -52,6 +52,27 @@ Reproducibility and Version Control:
 - Commit often with meaningful commit message, sync it with remote
 - When you implement large and significant, consider use new branch
 
+## Debugging Approach
+
+When encountering bugs or errors, ALWAYS follow this systematic approach:
+
+1. **STOP and ANALYZE FIRST** - Do not immediately modify code
+2. **Read the full error message** - Understand exactly what failed and where
+3. **Trace the execution path** - Follow the code flow to understand how the error occurred
+4. **Form a hypothesis** - Explain WHY you think this error is happening
+5. **Verify the hypothesis** - Check if your reasoning explains all symptoms
+6. **Only then implement a fix** - Make a targeted change that addresses the root cause
+7. **Test the fix** - Verify it actually resolves the issue
+
+NEVER:
+- Make random changes hoping something works
+- Skip understanding the error message
+- Modify code without explaining the root cause
+- Apply fixes without understanding why they should work
+
+If you catch yourself making repeated modifications without progress, STOP and return to step 1.
+When in doubt, use TodoWrite to create a debugging plan before making changes.
+
 Key Conventions:
 
 1. Follow PEP 8 style guide for Python code.
