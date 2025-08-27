@@ -11,7 +11,7 @@ Personal configuration files for development environment.
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
+git clone https://github.com/TravisCao/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
 ```
@@ -22,11 +22,11 @@ If you prefer to set up manually:
 
 ```bash
 # Shell configs
-ln -sf ~/dotfiles/shell/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/shell/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/shell/zshrc ~/.zshrc
+ln -sf ~/dotfiles/shell/bashrc ~/.bashrc
 
 # Tmux config
-ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 # Claude config
 mkdir -p ~/.claude

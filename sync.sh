@@ -34,6 +34,6 @@ if git remote get-url origin &>/dev/null; then
     echo "✅ Dotfiles synced to GitHub!"
 else
     echo "⚠️  No remote repository configured. Add with:"
-    echo "   git remote add origin https://github.com/yourusername/dotfiles.git"
+    echo "   git remote add origin https://github.com/TravisCao/dotfiles.git"
     echo "   git push -u origin main"
 fi
