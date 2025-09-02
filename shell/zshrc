@@ -115,10 +115,14 @@ plugins=(git)
 # Example aliases
 alias zshrc="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
-alias claude="claude --dangerously-skip-permissions"
 
 # Add Nexus CLI to PATH
 [ -d "$HOME/.nexus/bin" ] && export PATH="$HOME/.nexus/bin:$PATH"
+=======
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+
+# Add Nexus CLI to PATH
+export PATH="$HOME/.nexus/bin:$PATH"
 
 # Add MATLAB to library path if available
 [ -d "/usr/local/MATLAB/R2024b/bin/glnxa64" ] && export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/R2024b/bin/glnxa64
