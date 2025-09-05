@@ -26,6 +26,21 @@ if [ "$SHELL" != "$(which zsh)" ]; then
     echo "✅ zsh set as default shell. Please restart your terminal."
 fi
 
+# Install fzf if not present
+if ! command -v fzf &> /dev/null; then
+    echo "📥 Installing fzf..."
+    if [ ! -d "$HOME/.fzf" ]; then
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        # Run fzf install script with auto-yes to all prompts
+        ~/.fzf/install --all
+        echo "✅ fzf installed successfully!"
+    else
+        echo "⚠️  fzf directory already exists at ~/.fzf"
+    fi
+else
+    echo "✅ fzf already installed"
+fi
+
 # Check if Oh My Zsh is installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "⚠️  Oh My Zsh is not installed but required for the zsh configuration."
