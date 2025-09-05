@@ -34,6 +34,33 @@ ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
 ```
 
+## Machine-Specific Configuration
+
+The dotfiles support machine-specific configurations through local override files:
+
+1. **Create your local config file:**
+   ```bash
+   cp ~/dotfiles/shell/zshrc.local.example ~/.zshrc.local
+   ```
+
+2. **Edit `~/.zshrc.local` to add machine-specific settings:**
+   - Software paths (e.g., Gurobi, MATLAB)
+   - Custom aliases
+   - Environment variables
+   - Machine-specific PATH additions
+
+3. **Example configurations:**
+   ```bash
+   # Gurobi solver
+   export GUROBI_HOME=/opt/gurobi1201/linux64
+   export PATH="$GUROBI_HOME/bin:$PATH"
+   
+   # Custom aliases
+   alias myproject="cd /path/to/my/project"
+   ```
+
+The `~/.zshrc.local` file is automatically loaded by the main zshrc and is ignored by git, so you can customize it freely without affecting the shared configuration.
+
 ## Backup
 
 The install script automatically creates backups of existing files in `~/.dotfiles_backup_<timestamp>/`.

@@ -9,10 +9,7 @@ if [ ! -d "$ZSH" ]; then
   echo "Oh My Zsh not found. Installing..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-export GUROBI_HOME=/opt/gurobi1201/linux64
-export PATH="$GUROBI_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export LD_LIBRARY_PATH="$GUROBI_HOME/lib:$LD_LIBRARY_PATH"
 export NODE_OPTIONS="--max-old-space-size=8192" # this is for pylance crashing https://github.com/microsoft/pylance-release/blob/main/TROUBLESHOOTING.md#increase-memory-limit-for-vs-code-remote-only
 
 # Set name of the theme to load --- if set to "random", it will
@@ -123,5 +120,5 @@ alias sz="source ~/.zshrc"
 # Add Nexus CLI to PATH
 export PATH="$HOME/.nexus/bin:$PATH"
 
-# Add MATLAB to library path if available
-[ -d "/usr/local/MATLAB/R2024b/bin/glnxa64" ] && export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/R2024b/bin/glnxa64
+# Load machine-specific local configurations
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

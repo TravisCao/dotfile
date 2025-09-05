@@ -1,0 +1,22 @@
+# Machine-specific configuration template
+# Copy this file to ~/.zshrc.local and customize for your machine
+# This file is not tracked by git, so you can modify it freely
+
+# Example: Gurobi optimization solver configuration
+# export GUROBI_HOME=/opt/gurobi1201/linux64
+# export PATH="$GUROBI_HOME/bin:$PATH"
+# export LD_LIBRARY_PATH="$GUROBI_HOME/lib:$LD_LIBRARY_PATH"
+
+# Example: MATLAB configuration
+# [ -d "/usr/local/MATLAB/R2024b/bin/glnxa64" ] && export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/R2024b/bin/glnxa64
+
+# Example: Machine-specific aliases
+# alias myserver="ssh user@myserver.com"
+# alias myproject="cd /path/to/my/project"
+
+# Example: Custom PATH additions
+# export PATH="/custom/bin:$PATH"
+
+# Example: Machine-specific environment variables
+# export CUSTOM_WORKSPACE="/path/to/workspace"
+# export GPU_DEVICE_ID=0

@@ -20,3 +20,8 @@ Thumbs.db
 
 # Backup directories
 .dotfiles_backup_*
+
+# Local machine-specific configurations
+*.local
+.zshrc.local
+.bashrc.local
