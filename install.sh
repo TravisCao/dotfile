@@ -9,6 +9,18 @@ DOTFILES_DIR="$HOME/dotfiles"
 
 echo "🔧 Installing dotfiles..."
 
+# Install zsh if not present
+if ! command -v zsh &> /dev/null; then
+    echo "📥 Installing zsh..."
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        brew install zsh
+    else
+        sudo apt update && sudo apt install -y zsh
+    fi
+    chsh -s $(which zsh)
+    echo "✅ zsh installed. Please restart your terminal."
+fi
+
 # Check if Oh My Zsh is installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "⚠️  Oh My Zsh is not installed but required for the zsh configuration."
