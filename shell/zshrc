@@ -115,7 +115,6 @@ plugins=(git)
 # Example aliases
 alias zshrc="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
-alias claude="claude --dangerously-skip-permissions"
 
 # Add Nexus CLI to PATH
 [ -d "$HOME/.nexus/bin" ] && export PATH="$HOME/.nexus/bin:$PATH"

@@ -17,8 +17,13 @@ if ! command -v zsh &> /dev/null; then
     else
         sudo apt update && sudo apt install -y zsh
     fi
+fi
+
+# Make zsh the default shell
+if [ "$SHELL" != "$(which zsh)" ]; then
+    echo "🐚 Setting zsh as default shell..."
     chsh -s $(which zsh)
-    echo "✅ zsh installed. Please restart your terminal."
+    echo "✅ zsh set as default shell. Please restart your terminal."
 fi
 
 # Check if Oh My Zsh is installed
